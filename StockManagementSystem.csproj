@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92EC7745-02C6-40C0-83CA-B8E8E28AFDE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StockManagementSystem</RootNamespace>
+    <AssemblyName>StockManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetBill.cs">
+      <DependentUpon>DataSetBill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetBill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetBill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdd_ProductName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdd_ProductName.Designer.cs">
+      <DependentUpon>frmAdd_ProductName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDealerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDealerInfo.Designer.cs">
+      <DependentUpon>frmDealerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerateBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerateBill.Designer.cs">
+      <DependentUpon>frmGenerateBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrinterConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrinterConfig.Designer.cs">
+      <DependentUpon>frmPrinterConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPurchaseMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPurchaseMaster.Designer.cs">
+      <DependentUpon>frmPurchaseMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplasSTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplasSTK.Designer.cs">
+      <DependentUpon>frmSplasSTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainSTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainSTK.Designer.cs">
+      <DependentUpon>frmMainSTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTools.Designer.cs">
+      <DependentUpon>frmTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnit.Designer.cs">
+      <DependentUpon>frmUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdd_ProductName.resx">
+      <DependentUpon>frmAdd_ProductName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDealerInfo.resx">
+      <DependentUpon>frmDealerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerateBill.resx">
+      <DependentUpon>frmGenerateBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrinterConfig.resx">
+      <DependentUpon>frmPrinterConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPurchaseMaster.resx">
+      <DependentUpon>frmPurchaseMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplasSTK.resx">
+      <DependentUpon>frmSplasSTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainSTK.resx">
+      <DependentUpon>frmMainSTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTools.resx">
+      <DependentUpon>frmTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnit.resx">
+      <DependentUpon>frmUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataSetBill.xsc">
+      <DependentUpon>DataSetBill.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetBill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetBill.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetBill.xss">
+      <DependentUpon>DataSetBill.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\10.png" />
+    <Content Include="Images\Arrow_Horizontal_YallowBack.png" />
+    <Content Include="Images\Arrow_Horizontal_YallowBlue.png" />
+    <Content Include="Images\Arrow_Vertical_YallowBack.png" />
+    <Content Include="Images\Arrow_Vertical_YellowBlue.png" />
+    <Content Include="Images\BigFrame.png" />
+    <Content Include="Images\BluePanel.png" />
+    <Content Include="Images\BluePanelMid.png" />
+    <Content Include="Images\DeteteRed.png" />
+    <Content Include="Images\LineSTK.png" />
+    <Content Include="Images\ScaletIBIS_Dj.png" />
+    <Content Include="Images\ScaletIBIS_DjBlue.png" />
+    <Content Include="Images\ScaletIBIS_Dj_Back.png" />
+    <Content Include="Images\ScreenBack.png" />
+    <Content Include="Images\ScreenBlanc.png" />
+    <Content Include="Images\ScreenChocco.png" />
+    <Content Include="Images\StopButto.png" />
+    <Content Include="Images\TitlePanelMid_Butt.png" />
+    <Content Include="Images\TitlePanelSmall.png" />
+    <Content Include="Inventory.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Inventory_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Inventory.mdf</DependentUpon>
+    </Content>
+    <None Include="Images\93-128BANK.jpg" />
+    <Content Include="Images\Accounting.jpg" />
+    <Content Include="Images\Arrow_Horizontal.png" />
+    <Content Include="Images\Arrow_Horizontal_Shadow.png" />
+    <Content Include="Images\Arrow_Horizontal_Yallow.png" />
+    <Content Include="Images\Arrow_Vertical.png" />
+    <Content Include="Images\Arrow_Vertical_Shadow.png" />
+    <Content Include="Images\Arrow_Vertical_Yallow.png" />
+    <Content Include="Images\Finace.jpg" />
+    <Content Include="Images\Front10.png" />
+    <Content Include="Images\Front12.png" />
+    <Content Include="Images\Front4.png" />
+    <Content Include="Images\Front9.PNG" />
+    <Content Include="Images\IbisFly.jpg" />
+    <Content Include="Images\PanelX.png" />
+    <Content Include="Images\PanelX2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
